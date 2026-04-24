@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Gobinda Bista — CEO & Founder of CodeGhar Nepal Pvt. Ltd. Technology entrepreneur building AI, software, and digital products.">
+    <meta name="keywords" content="Gobinda Bista, CodeGhar Nepal, CEO, Founder, AI, Machine Learning, Web Development, Nepal">
+    <title>Gobinda Bista | CEO & Founder — CodeGhar Nepal</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="logo.png">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="styles.css?v=1.1">
+</head>
+<body>
+    <!-- Theme Toggle & Navigation -->
+    <header class="header">
+        <div class="nav-container">
+            <a href="#home" class="logo">
+                <img src="logo.png" alt="Logo" style="height: 45px; border-radius: 6px;">
+            </a>
+            
+            <nav class="desktop-nav">
+                <a href="#about" class="nav-link" data-tkey="navAbout">About</a>
+                <a href="#company" class="nav-link" data-tkey="navCompany">Company</a>
+                <a href="#expertise" class="nav-link" data-tkey="navExpertise">Expertise</a>
+                <a href="#projects" class="nav-link" data-tkey="navProjects">Projects</a>
+                <a href="#blog" class="nav-link" data-tkey="navBlog">Blog</a>
+                <a href="#contact" class="nav-link" data-tkey="navContact">Contact</a>
+            </nav>
+
+            <div class="nav-actions">
+                <button id="lang-toggle" class="btn btn-secondary btn-sm" style="padding:0.4rem 0.8rem; font-size:0.8rem;" aria-label="Toggle language">नेपाली</button>
+                <button id="theme-toggle" class="icon-btn" aria-label="Toggle theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <a href="cv.pdf" class="btn btn-primary btn-sm" data-tkey="navResume" download>Resume</a>
+                <button id="mobile-menu-btn" class="icon-btn mobile-only" aria-label="Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="mobile-nav">
+            <a href="#about" class="mobile-link" data-tkey="navAbout">About</a>
+            <a href="#company" class="mobile-link" data-tkey="navCompany">Company</a>
+            <a href="#expertise" class="mobile-link" data-tkey="navExpertise">Expertise</a>
+            <a href="#projects" class="mobile-link" data-tkey="navProjects">Projects</a>
+            <a href="#blog" class="mobile-link" data-tkey="navBlog">Blog</a>
+            <a href="#contact" class="mobile-link" data-tkey="navContact">Contact</a>
+        </div>
+    </div>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="hero-background">
+                <div class="glow glow-1"></div>
+                <div class="glow glow-2"></div>
+            </div>
+            
+            <div class="container hero-container">
+                <div class="hero-content fade-up">
+                    <div class="badge glass-panel">
+                        <span class="pulse-dot"></span> <span data-tkey="heroBadge">Available for Strategic Partnerships</span>
+                    </div>
+                    <h1 class="hero-title">
+                        Gobinda <span class="text-gradient">Bista</span>
+                    </h1>
+                    <div class="hero-subtitle">
+                        <span data-tkey="heroSubtitle">CEO & Founder · CodeGhar Nepal Pvt. Ltd.</span>
+                    </div>
+                    <p class="hero-description" data-tkey="heroDesc">
+                        Technology entrepreneur currently pursuing an M.E. in Computer Engineering, building the next generation of AI, software, and digital products. Transforming ideas into real solutions at the intersection of engineering and business leadership.
+                    </p>
+                    
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn btn-primary"><span data-tkey="heroBtnPort">View Portfolio</span> <i class="fa-solid fa-arrow-right"></i></a>
+                        <a href="#contact" class="btn btn-secondary" data-tkey="heroBtnContact">Get in Touch</a>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://github.com/GOBINDABISTA" target="_blank" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                        <a href="https://gitlab.com/GOBINDABISTA" target="_blank" aria-label="GitLab"><i class="fa-brands fa-gitlab"></i></a>
+                        <a href="https://www.linkedin.com/in/gobinda-bista-8ba3b4267/" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="mailto:sirgb22@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                    </div>
+                </div>
+                
+                <div class="hero-visual fade-up delay-1">
+                    <div class="profile-card glass-panel">
+                        <div class="profile-image-container">
+                            <img src="Untitled.jpg" alt="Gobinda Bista" class="profile-image">
+                            <div class="profile-overlay"></div>
+                        </div>
+                        <div class="profile-info">
+                            <div class="philosophy-quote">
+                                <i class="fa-solid fa-quote-left"></i> <span data-tkey="quote">Code. Build. Innovate. Repeat.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Company Section (CodeGhar Nepal) -->
+        <section id="company" class="section">
+            <div class="container">
+                <div class="section-header fade-up">
+                    <h2 class="section-title" data-tkey="compTitle">The Startup</h2>
+                    <p class="section-subtitle" data-tkey="compSub">Building the "Home of Code" in Nepal</p>
+                </div>
+                
+                <div class="company-showcase glass-panel fade-up">
+                    <div class="company-info">
+                        <div class="company-logo-area">
+                            <i class="fa-solid fa-building-flag text-gradient" style="font-size: 3rem;"></i>
+                            <h3>CodeGhar Nepal <span class="badge-sm">Pvt. Ltd.</span></h3>
+                            <p class="founded-text">Founded 2026 • Bhaktapur, Nepal</p>
+                        </div>
+                        <p class="company-desc" data-tkey="compDesc">
+                            A premier technology company delivering Website Development, Web Applications, Mobile Applications, and AI / Machine Learning Solutions. 
+                        </p>
+                        <div class="mission-statement">
+                            <strong>Mission:</strong> <span data-tkey="compMission">"To transform ideas into real digital products through CodeGhar Nepal with innovation, quality, and affordability."</span>
+                        </div>
+                    </div>
+                    <div class="company-stats">
+                        <div class="stat-box">
+                            <span class="stat-number text-gradient">15+</span>
+                            <span class="stat-label" data-tkey="compStat1">Projects Delivered</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number text-gradient">4</span>
+                            <span class="stat-label" data-tkey="compStat2">Core Domains</span>
+                        </div>
+                        <div class="stat-box">
+                            <span class="stat-number text-gradient">100%</span>
+                            <span class="stat-label" data-tkey="compStat3">Client Satisfaction</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About & Experience (Bento Grid) -->
+        <section id="about" class="section bg-alt">
+            <div class="container">
+                <div class="section-header fade-up">
+                    <h2 class="section-title" data-tkey="aboutTitle">Professional Identity</h2>
+                    <p class="section-subtitle" data-tkey="aboutSub">Engineering knowledge meets startup execution</p>
+                </div>
+
+                <div class="bento-grid">
+                    <!-- About Me -->
+                    <div class="bento-item glass-panel span-2 fade-up">
+                        <h3 class="bento-title"><i class="fa-solid fa-terminal"></i> <span data-tkey="aboutMe">About Me</span></h3>
+                        <p data-tkey="aboutP1">I am a professional Full-Stack Developer and Machine Learning Engineer. With a strong foundation in Computer Engineering, I specialize in architecting scalable web applications, deploying AI models into production, and building resilient infrastructure.</p>
+                        <p data-tkey="aboutP2">As the CEO & Founder of CodeGhar Nepal, I lead a team dedicated to transforming complex business problems into elegant, high-performance digital solutions.</p>
+                        <div class="tech-stack-icons" style="margin-top: 1.5rem; font-size: 1.5rem; display: flex; gap: 1rem; color: var(--color-accent);">
+                            <i class="fa-brands fa-python" title="Python"></i>
+                            <i class="fa-brands fa-js" title="JavaScript"></i>
+                            <i class="fa-brands fa-react" title="React"></i>
+                            <i class="fa-brands fa-php" title="PHP"></i>
+                            <i class="fa-solid fa-server" title="Backend Systems"></i>
+                            <i class="fa-solid fa-database" title="Databases"></i>
+                        </div>
+                    </div>
+
+                    <!-- Location -->
+                    <div class="bento-item glass-panel fade-up delay-1 flex-center col-flex">
+                        <i class="fa-solid fa-location-dot text-gradient" style="font-size: 2.5rem; margin-bottom: 1rem;"></i>
+                        <h3 class="bento-title" data-tkey="aboutBase">Base of Operations</h3>
+                        <p style="text-align: center;">Bhaktapur Municipality-8<br>Libali, Nepal</p>
+                    </div>
+
+                    <!-- Experience -->
+                    <div class="bento-item glass-panel span-2 fade-up delay-1">
+                        <h3 class="bento-title"><i class="fa-solid fa-briefcase"></i> <span data-tkey="aboutExp">Experience</span></h3>
+                        <div class="timeline">
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">2026 - Present</div>
+                                <h4 class="timeline-role" data-tkey="expRole1">CEO & Founder</h4>
+                                <div class="timeline-company">CodeGhar Nepal Pvt. Ltd.</div>
+                            </div>
+                            <div class="timeline-item">
+                                <div class="timeline-dot"></div>
+                                <div class="timeline-date">Dec 2024</div>
+                                <h4 class="timeline-role" data-tkey="expRole2">Machine Learning Engineer</h4>
+                                <div class="timeline-company">Fusemachines Pvt. Ltd.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Education -->
+                    <div class="bento-item glass-panel fade-up delay-2">
+                        <h3 class="bento-title"><i class="fa-solid fa-graduation-cap"></i> <span data-tkey="aboutEdu">Education</span></h3>
+                        <div class="edu-item">
+                            <h4 data-tkey="eduDeg">M.E. in Computer Engineering</h4>
+                            <p><em data-tkey="eduStatus">Currently Pursuing</em></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Expertise & Skills -->
+        <section id="expertise" class="section">
+            <div class="container">
+                <div class="section-header fade-up">
+                    <h2 class="section-title" data-tkey="expTitle">Core Expertise</h2>
+                    <p class="section-subtitle" data-tkey="expSub">Technical prowess and strategic thinking</p>
+                </div>
+
+                <div class="skills-grid">
+                    <div class="skill-category glass-panel fade-up">
+                        <div class="category-icon"><i class="fa-solid fa-brain"></i></div>
+                        <h3 data-tkey="exp1Title">AI & ML Systems</h3>
+                        <p data-tkey="exp1Desc">Model development, evaluation, deployment, and real-time inference optimization.</p>
+                        <div class="tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">TensorFlow</span>
+                            <span class="tag">PyTorch</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category glass-panel fade-up delay-1">
+                        <div class="category-icon"><i class="fa-solid fa-laptop-code"></i></div>
+                        <h3 data-tkey="exp2Title">Software Engineering</h3>
+                        <p data-tkey="exp2Desc">Full-stack scalable architectures, clean code practices, and modern web frameworks.</p>
+                        <div class="tags">
+                            <span class="tag">React</span>
+                            <span class="tag">PHP</span>
+                            <span class="tag">JS/TS</span>
+                            <span class="tag">C/C++</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category glass-panel fade-up delay-2">
+                        <div class="category-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                        <h3 data-tkey="exp3Title">Security & Systems</h3>
+                        <p data-tkey="exp3Desc">Secure coding, anomaly detection, networking protocols, and system hardening.</p>
+                        <div class="tags">
+                            <span class="tag">Cybersecurity</span>
+                            <span class="tag">OS</span>
+                            <span class="tag">DBMS</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category glass-panel fade-up delay-3">
+                        <div class="category-icon"><i class="fa-solid fa-chess-knight"></i></div>
+                        <h3 data-tkey="exp4Title">Startup Leadership</h3>
+                        <p data-tkey="exp4Desc">Business strategy, product management, client relations, and team execution.</p>
+                        <div class="tags">
+                            <span class="tag">Strategy</span>
+                            <span class="tag">Consulting</span>
+                            <span class="tag">Growth</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects -->
+        <section id="projects" class="section bg-alt">
+            <div class="container">
+                <div class="section-header fade-up">
+                    <h2 class="section-title" data-tkey="projTitle">Selected Works</h2>
+                    <p class="section-subtitle" data-tkey="projSub">A showcase of engineering and innovation</p>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Project 1 -->
+                    <div class="project-card glass-panel fade-up">
+                        <img src="https://loremflickr.com/800/400/facial-recognition,ai,face/all" alt="Real-time Facial Recognition" class="project-img">
+                        <div class="project-body">
+                            <div class="project-content">
+                                <div class="project-icon"><i class="fa-solid fa-face-viewfinder"></i></div>
+                                <h3 class="project-title" data-tkey="proj1Title">Real-time Facial Recognition</h3>
+                                <p class="project-desc" data-tkey="proj1Desc">CNN-based embeddings and OpenCV for video capture, focused on latency reduction and accuracy via model quantization.</p>
+                                <div class="project-tech">
+                                    <span class="tag">Python</span>
+                                    <span class="tag">OpenCV</span>
+                                    <span class="tag">TensorFlow</span>
+                                </div>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/GOBINDABISTA/Facialrecognization-and-tracking" target="_blank" class="project-link">Source Code <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2 -->
+                    <div class="project-card glass-panel fade-up delay-1">
+                        <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?q=80&w=800" alt="Ransomware Detection" class="project-img">
+                        <div class="project-body">
+                            <div class="project-content">
+                                <div class="project-icon"><i class="fa-solid fa-shield-virus"></i></div>
+                                <h3 class="project-title" data-tkey="proj2Title">Ransomware Detection</h3>
+                                <p class="project-desc" data-tkey="proj2Desc">Research for anomaly detection in encrypted traffic using statistical and ML features to find early ransomware indicators.</p>
+                                <div class="project-tech">
+                                    <span class="tag">Python</span>
+                                    <span class="tag">Scikit-learn</span>
+                                    <span class="tag">Networking</span>
+                                </div>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/GOBINDABISTA/Ransomware-Detection-in-Encrypted-Networks-Using-Machine-Learning" target="_blank" class="project-link">Source Code <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3 -->
+                    <div class="project-card glass-panel fade-up delay-2">
+                        <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?q=80&w=800" alt="Market Prediction" class="project-img">
+                        <div class="project-body">
+                            <div class="project-content">
+                                <div class="project-icon"><i class="fa-solid fa-chart-line"></i></div>
+                                <h3 class="project-title" data-tkey="proj3Title">Market Prediction & NLP</h3>
+                                <p class="project-desc" data-tkey="proj3Desc">Time-series models combined with sentiment analysis from news and social feeds to produce short-term market signals.</p>
+                                <div class="project-tech">
+                                    <span class="tag">Python</span>
+                                    <span class="tag">Pandas</span>
+                                    <span class="tag">NLP</span>
+                                </div>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/GOBINDABISTA" target="_blank" class="project-link">Source Code <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 4 -->
+                    <div class="project-card glass-panel fade-up">
+                        <img src="https://images.unsplash.com/photo-1507842217343-583bb7270b66?q=80&w=800" alt="Library System" class="project-img">
+                        <div class="project-body">
+                            <div class="project-content">
+                                <div class="project-icon"><i class="fa-solid fa-book-open-reader"></i></div>
+                                <h3 class="project-title" data-tkey="proj4Title">Library Management System</h3>
+                                <p class="project-desc" data-tkey="proj4Desc">Full-stack web application with book catalog, user accounts, borrowing workflows, and an administrative dashboard.</p>
+                                <div class="project-tech">
+                                    <span class="tag">Laravel</span>
+                                    <span class="tag">PHP</span>
+                                    <span class="tag">MySQL</span>
+                                </div>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/GOBINDABISTA/LibraryManagementSystem-php" target="_blank" class="project-link">Source Code <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 5 -->
+                    <div class="project-card glass-panel fade-up delay-1">
+                        <img src="https://images.unsplash.com/photo-1472851294608-062f824d29cc?q=80&w=800" alt="Book Store" class="project-img">
+                        <div class="project-body">
+                            <div class="project-content">
+                                <div class="project-icon"><i class="fa-solid fa-store"></i></div>
+                                <h3 class="project-title" data-tkey="proj5Title">Online Book Store</h3>
+                                <p class="project-desc" data-tkey="proj5Desc">E-commerce platform featuring a product catalog, search functionality, cart management, checkout, and user profiles.</p>
+                                <div class="project-tech">
+                                    <span class="tag">PHP</span>
+                                    <span class="tag">MySQL</span>
+                                    <span class="tag">Web Dev</span>
+                                </div>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/GOBINDABISTA/onlinebookstorewithphp" target="_blank" class="project-link">Source Code <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 6 -->
+                    <div class="project-card glass-panel fade-up delay-2">
+                        <img src="https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?q=80&w=800" alt="Task Management" class="project-img">
+                        <div class="project-body">
+                            <div class="project-content">
+                                <div class="project-icon"><i class="fa-solid fa-list-check"></i></div>
+                                <h3 class="project-title" data-tkey="proj6Title">Task Management Platform</h3>
+                                <p class="project-desc" data-tkey="proj6Desc">A full-stack daily task tracker with user authentication, persistent data storage, and complete CRUD operations.</p>
+                                <div class="project-tech">
+                                    <span class="tag">PHP</span>
+                                    <span class="tag">MySQL</span>
+                                    <span class="tag">JS/CSS</span>
+                                </div>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://github.com/GOBINDABISTA/simpleTO-DO-tracker" target="_blank" class="project-link">Source Code <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="section">
+            <div class="container">
+                <div class="section-header fade-up">
+                    <h2 class="section-title" data-tkey="blogTitle">Technical Insights</h2>
+                    <p class="section-subtitle" data-tkey="blogSub">Articles on AI, Engineering, and Startups</p>
+                </div>
+
+                <div class="projects-grid">
+                    <!-- Blog 1 -->
+                    <div class="project-card glass-panel fade-up">
+                        <div class="project-body">
+                            <div class="project-content">
+                                <div class="project-icon" style="margin-top: 0;"><i class="fa-solid fa-server"></i></div>
+                                <h3 class="project-title">Scaling Web Apps in 2026</h3>
+                                <p class="project-desc">A deep dive into resilient infrastructure, microservices, and AI-driven load balancing for high-traffic platforms.</p>
+                            </div>
+                            <div class="project-links">
+                                <a href="mailto:sirgb22@gmail.com?subject=Inquiry about Scaling Web Apps Article" class="project-link">Request Full Access <i class="fa-solid fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog 2 -->
+                    <div class="project-card glass-panel fade-up delay-1">
+                        <div class="project-body">
+                            <div class="project-content">
+                                <div class="project-icon" style="margin-top: 0;"><i class="fa-solid fa-brain"></i></div>
+                                <h3 class="project-title">ML Models to Production</h3>
+                                <p class="project-desc">Lessons learned from deploying real-time facial recognition and anomaly detection models to edge devices.</p>
+                            </div>
+                            <div class="project-links">
+                                <a href="mailto:sirgb22@gmail.com?subject=Inquiry about ML MLOps Article" class="project-link">Request Full Access <i class="fa-solid fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Blog 3 -->
+                    <div class="project-card glass-panel fade-up delay-2">
+                        <div class="project-body">
+                            <div class="project-content">
+                                <div class="project-icon" style="margin-top: 0;"><i class="fa-solid fa-rocket"></i></div>
+                                <h3 class="project-title">Building CodeGhar Nepal</h3>
+                                <p class="project-desc">The journey from student entrepreneur to founding a tech company. Strategy, challenges, and vision.</p>
+                            </div>
+                            <div class="project-links">
+                                <a href="mailto:sirgb22@gmail.com?subject=Inquiry about CodeGhar Journey Article" class="project-link">Request Full Access <i class="fa-solid fa-envelope"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section">
+            <div class="container">
+                <div class="contact-wrapper glass-panel fade-up">
+                    <div class="contact-info">
+                        <h2 class="section-title" style="text-align: left; margin-bottom: 1rem;" data-tkey="contactTitle">Let's Collaborate</h2>
+                        <p class="contact-desc" data-tkey="contactDesc">Ready to build your next big idea or discuss AI and tech strategies? Reach out and let's create something extraordinary.</p>
+                        
+                        <div class="contact-methods">
+                            <div class="method">
+                                <i class="fa-solid fa-envelope"></i>
+                                <div>
+                                    <h4>Email</h4>
+                                    <a href="mailto:sirgb22@gmail.com">sirgb22@gmail.com</a>
+                                    <a href="mailto:bistagobinda0011.com" style="display:block;">bistagobinda0011.com</a>
+                                </div>
+                            </div>
+                            <div class="method">
+                                <i class="fa-brands fa-whatsapp"></i>
+                                <div>
+                                    <h4>WhatsApp</h4>
+                                    <a href="https://wa.me/9779842378928" target="_blank">+977 9842378928</a>
+                                </div>
+                            </div>
+                            <div class="method">
+                                <i class="fa-solid fa-location-dot"></i>
+                                <div>
+                                    <h4>Location</h4>
+                                    <p>Kathmandu / Bhaktapur, Nepal</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-form-container">
+                        <form id="contact-form" class="contact-form">
+                            <div class="form-group">
+                                <label for="name" data-tkey="formName">Name</label>
+                                <input type="text" id="name" name="name" class="form-control" required placeholder="John Doe">
+                            </div>
+                            <div class="form-group">
+                                <label for="email" data-tkey="formEmail">Email</label>
+                                <input type="email" id="email" name="email" class="form-control" required placeholder="john@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label for="subject" data-tkey="formSubj">Subject</label>
+                                <input type="text" id="subject" name="subject" class="form-control" placeholder="Project Inquiry">
+                            </div>
+                            <div class="form-group">
+                                <label for="message" data-tkey="formMsg">Message</label>
+                                <textarea id="message" name="message" class="form-control" rows="4" required placeholder="How can I help you?"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block"><span data-tkey="formSubmit">Send Message</span> <i class="fa-solid fa-paper-plane"></i></button>
+                            <div id="form-msg" class="form-msg"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <img src="logo.png" alt="Logo" style="height: 40px; border-radius: 6px; margin-bottom: 0.5rem;">
+                    <p>CEO & Founder, CodeGhar Nepal</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/GOBINDABISTA" target="_blank"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/gobinda-bista-8ba3b4267/" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="mailto:sirgb22@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Gobinda Bista. All rights reserved.</p>
+                <p>Designed and built for global impact.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Widget -->
+    <a href="https://wa.me/9779842378928" class="wa-float" target="_blank" aria-label="Chat on WhatsApp">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- Scripts -->
+    <script src="script.js?v=1.1"></script>
+</body>
+</html>
