@@ -23,7 +23,7 @@ const translations = {
         aboutTitle: "Professional Identity",
         aboutSub: "Engineering knowledge meets startup execution",
         aboutMe: "About Me",
-        aboutP1: "I am a professional Full-Stack Developer and Machine Learning Engineer. With a strong foundation in Computer Engineering, I specialize in architecting scalable web applications, deploying AI models into production, and building resilient infrastructure.",
+        aboutP1: "I am a  Full-Stack Developer and Machine Learning Engineer. With a strong foundation in Computer Engineering, I specialize in architecting scalable web applications, deploying AI models into production, and building resilient infrastructure.",
         aboutP2: "As the CEO & Founder of CodeGhar Nepal, I lead a team dedicated to transforming complex business problems into elegant, high-performance digital solutions.",
         aboutBase: "Base of Operations",
         aboutExp: "Experience",
