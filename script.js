@@ -23,8 +23,8 @@ const translations = {
         aboutTitle: "Professional Identity",
         aboutSub: "Engineering knowledge meets startup execution",
         aboutMe: "About Me",
-        aboutP1: "I am a  Full-Stack Developer and Machine Learning Engineer. With a strong foundation in Computer Engineering, I specialize in architecting scalable web applications, deploying AI models into production, and building resilient infrastructure.",
-        aboutP2: "As the CEO & Founder of CodeGhar Nepal, I lead a team dedicated to transforming complex business problems into elegant, high-performance digital solutions.",
+        aboutP1: "I am Er. Gobinda Bista, a Computer Engineer, technology entrepreneur, and Founder & CEO of CodeGhar Nepal. I work at the intersection of engineering, innovation, and business, with a passion for building technology-driven solutions that address real-world challenges. My interests span software engineering, artificial intelligence, and emerging computing technologies, particularly Quantum Machine Learning (QML) and Post-Quantum Cryptography (PQC).",
+        aboutP2: "At CodeGhar Nepal, I lead the vision, strategy, and development of technology solutions, bringing together people, ideas, and engineering to create meaningful digital impact. Beyond entrepreneurship, I am driven by research, continuous learning, and exploring the future of intelligent and secure computing.",
         aboutBase: "Base of Operations",
         aboutExp: "Experience",
         expRole1: "CEO & Founder",
@@ -64,7 +64,10 @@ const translations = {
         formEmail: "Email",
         formSubj: "Subject",
         formMsg: "Message",
-        formSubmit: "Send Message"
+        formSubmit: "Send Message",
+        formSending: "Sending...",
+        formSuccess: "Message sent successfully! I will reach out soon.",
+        formError: "Something went wrong. Please email me directly."
     },
     np: {
         navAbout: "प्रोफाइल",
@@ -90,8 +93,8 @@ const translations = {
         aboutTitle: "व्यावसायिक पहिचान",
         aboutSub: "इन्जिनियरिङ ज्ञान र स्टार्टअप कार्यान्वयन",
         aboutMe: "मेरो बारेमा",
-        aboutP1: "म एक व्यावसायिक फुल-स्ट्याक विकासकर्ता र मेसिन लर्निङ इन्जिनियर हुँ। कम्प्युटर इन्जिनियरिङमा बलियो आधारको साथ, म स्केलेबल वेब अनुप्रयोगहरू निर्माण गर्न, एआई मोडेलहरू डिप्लोय गर्न र लचिलो पूर्वाधार निर्माण गर्न विशेषज्ञ छु।",
-        aboutP2: "कोडघर नेपालको सीईओ र संस्थापकको रूपमा, म जटिल व्यापार समस्याहरूलाई उत्कृष्ट र उच्च-प्रदर्शन डिजिटल समाधानहरूमा रूपान्तरण गर्न समर्पित टोलीको नेतृत्व गर्दछु।",
+        aboutP1: "म इन्जिनियर गोबिन्द विष्ट, कम्प्युटर इन्जिनियर, प्रविधि उद्यमी, र कोडघर नेपालका संस्थापक तथा सीईओ हुँ। म इन्जिनियरिङ, नवीनता, र व्यवसायको संगममा काम गर्छु, र वास्तविक-विश्व चुनौतीहरूको समाधान गर्ने प्रविधि-संचालित समाधानहरू निर्माण गर्न उत्साहित छु। मेरा रुचिहरू सफ्टवेयर इन्जिनियरिङ, कृत्रिम बुद्धिमत्ता, र उदीयमान कम्प्युटिङ प्रविधिहरू — विशेष गरी क्वान्टम मेसिन लर्निङ (QML) र पोस्ट-क्वान्टम क्रिप्टोग्राफी (PQC) — सम्म फैलिएका छन्।",
+        aboutP2: "कोडघर नेपालमा, म प्रविधि समाधानहरूको दृष्टि, रणनीति, र विकासको नेतृत्व गर्छु, मानिसहरू, विचारहरू, र इन्जिनियरिङलाई एकसाथ ल्याएर अर्थपूर्ण डिजिटल प्रभाव सिर्जना गर्दछु। उद्यमशीलताभन्दा पर, म अनुसन्धान, निरन्तर सिकाइ, र बौद्धिक तथा सुरक्षित कम्प्युटिङको भविष्य अन्वेषण गर्न प्रेरित छु।",
         aboutBase: "सञ्चालनको आधार",
         aboutExp: "अनुभव",
         expRole1: "सीईओ र संस्थापक",
@@ -131,7 +134,10 @@ const translations = {
         formEmail: "इमेल",
         formSubj: "विषय",
         formMsg: "सन्देश",
-        formSubmit: "सन्देश पठाउनुहोस्"
+        formSubmit: "सन्देश पठाउनुहोस्",
+        formSending: "पठाउँदै...",
+        formSuccess: "सन्देश सफलतापूर्वक पठाइयो! म चाँडै सम्पर्क गर्नेछु।",
+        formError: "केही गडबड भयो। कृपया मलाई सिधै इमेल गर्नुहोस्।"
     }
 };
 
@@ -142,10 +148,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function applyLanguage(lang) {
         const trans = translations[lang];
+        if (!trans) return;
+
         document.querySelectorAll('[data-tkey]').forEach(el => {
             const key = el.getAttribute('data-tkey');
             if (trans[key]) {
-                el.innerHTML = trans[key];
+                // Use textContent for safety; translations contain no HTML
+                el.textContent = trans[key];
+            } else {
+                console.warn('Missing translation key:', key, 'for lang:', lang);
             }
         });
 
@@ -156,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
             'subject': 'formSubj',
             'message': 'formMsg'
         };
-        
+
         for (const [id, key] of Object.entries(formFields)) {
             const el = document.getElementById(id);
             if (el && trans[key]) {
@@ -164,7 +175,11 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        langToggleBtn.textContent = lang === 'en' ? 'नेपाली' : 'English';
+        if (langToggleBtn) {
+            langToggleBtn.textContent = lang === 'en' ? 'नेपाली' : 'English';
+            langToggleBtn.setAttribute('aria-label',
+                lang === 'en' ? 'नेपालीमा हेर्नुहोस्' : 'Switch to English');
+        }
         document.documentElement.lang = lang;
         localStorage.setItem('lang', lang);
         currentLang = lang;
@@ -173,29 +188,34 @@ document.addEventListener('DOMContentLoaded', () => {
     // Apply saved language on load
     applyLanguage(currentLang);
 
-    langToggleBtn.addEventListener('click', () => {
-        applyLanguage(currentLang === 'en' ? 'np' : 'en');
-    });
+    if (langToggleBtn) {
+        langToggleBtn.addEventListener('click', () => {
+            applyLanguage(currentLang === 'en' ? 'np' : 'en');
+        });
+    }
 
     // 2. Theme Toggling
     const themeToggleBtn = document.getElementById('theme-toggle');
     const htmlEl = document.documentElement;
-    const themeIcon = themeToggleBtn.querySelector('i');
+    const themeIcon = themeToggleBtn ? themeToggleBtn.querySelector('i') : null;
 
     const savedTheme = localStorage.getItem('theme') || 'dark';
     htmlEl.setAttribute('data-theme', savedTheme);
     updateThemeIcon(savedTheme);
 
-    themeToggleBtn.addEventListener('click', () => {
-        const currentTheme = htmlEl.getAttribute('data-theme');
-        const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
-        
-        htmlEl.setAttribute('data-theme', newTheme);
-        localStorage.setItem('theme', newTheme);
-        updateThemeIcon(newTheme);
-    });
+    if (themeToggleBtn) {
+        themeToggleBtn.addEventListener('click', () => {
+            const currentTheme = htmlEl.getAttribute('data-theme');
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+
+            htmlEl.setAttribute('data-theme', newTheme);
+            localStorage.setItem('theme', newTheme);
+            updateThemeIcon(newTheme);
+        });
+    }
 
     function updateThemeIcon(theme) {
+        if (!themeIcon) return;
         if (theme === 'dark') {
             themeIcon.className = 'fa-solid fa-sun';
         } else {
@@ -209,100 +229,134 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileLinks = document.querySelectorAll('.mobile-link');
     let isMenuOpen = false;
 
-    mobileMenuBtn.addEventListener('click', () => {
-        isMenuOpen = !isMenuOpen;
-        if (isMenuOpen) {
+    function setMenuState(open) {
+        isMenuOpen = open;
+        if (!mobileMenu || !mobileMenuBtn) return;
+
+        if (open) {
             mobileMenu.classList.add('active');
+            mobileMenu.removeAttribute('aria-hidden');
             mobileMenuBtn.innerHTML = '<i class="fa-solid fa-xmark"></i>';
+            mobileMenuBtn.setAttribute('aria-expanded', 'true');
+            mobileMenuBtn.setAttribute('aria-label', 'Close menu');
             document.body.style.overflow = 'hidden';
         } else {
-            closeMobileMenu();
+            mobileMenu.classList.remove('active');
+            mobileMenu.setAttribute('aria-hidden', 'true');
+            mobileMenuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
+            mobileMenuBtn.setAttribute('aria-expanded', 'false');
+            mobileMenuBtn.setAttribute('aria-label', 'Menu');
+            document.body.style.overflow = '';
+        }
+    }
+
+    // Initialize closed state
+    setMenuState(false);
+
+    if (mobileMenuBtn) {
+        mobileMenuBtn.addEventListener('click', () => {
+            setMenuState(!isMenuOpen);
+        });
+    }
+
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', () => setMenuState(false));
+    });
+
+    // Close on Escape
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && isMenuOpen) {
+            setMenuState(false);
         }
     });
 
-    mobileLinks.forEach(link => {
-        link.addEventListener('click', closeMobileMenu);
+    // Reset menu if resized to desktop
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768 && isMenuOpen) {
+            setMenuState(false);
+        }
     });
-
-    function closeMobileMenu() {
-        mobileMenu.classList.remove('active');
-        mobileMenuBtn.innerHTML = '<i class="fa-solid fa-bars"></i>';
-        document.body.style.overflow = '';
-        isMenuOpen = false;
-    }
 
     // 4. Header Scroll Effect
     const header = document.querySelector('.header');
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 50) {
-            header.style.boxShadow = 'var(--glass-shadow)';
-        } else {
-            header.style.boxShadow = 'none';
-        }
-    });
+    if (header) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.style.boxShadow = 'var(--glass-shadow)';
+            } else {
+                header.style.boxShadow = 'none';
+            }
+        }, { passive: true });
+    }
 
     // 5. Intersection Observer for Fade-Up Animations
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.15
-    };
+    const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('visible');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
+    if (prefersReducedMotion) {
+        // Reveal everything immediately
+        document.querySelectorAll('.fade-up').forEach(el => el.classList.add('visible'));
+    } else {
+        const observerOptions = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.15
+        };
 
-    const fadeElements = document.querySelectorAll('.fade-up');
-    fadeElements.forEach(el => {
-        observer.observe(el);
-    });
+        const observer = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    obs.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+    }
 
     // 6. Contact Form Mock Submission
     const contactForm = document.getElementById('contact-form');
     const formMsg = document.getElementById('form-msg');
 
-    if (contactForm) {
+    if (contactForm && formMsg) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            
+
             const submitBtn = contactForm.querySelector('button[type="submit"]');
-            const originalText = submitBtn.innerHTML;
-            
-            submitBtn.innerHTML = '<i class="fa-solid fa-circle-notch fa-spin"></i> Sending...';
+            const originalHTML = submitBtn.innerHTML;
+            const trans = translations[currentLang] || translations.en;
+
+            submitBtn.innerHTML = `<i class="fa-solid fa-circle-notch fa-spin"></i> ${trans.formSending}`;
             submitBtn.disabled = true;
+            formMsg.textContent = '';
 
             setTimeout(() => {
                 contactForm.reset();
-                submitBtn.innerHTML = originalText;
+                submitBtn.innerHTML = originalHTML;
                 submitBtn.disabled = false;
-                
-                formMsg.innerHTML = '<span style="color: #25d366;"><i class="fa-solid fa-circle-check"></i> Message sent successfully! I will reach out soon.</span>';
-                
+
+                formMsg.innerHTML = `<span style="color: #25d366;"><i class="fa-solid fa-circle-check"></i> ${trans.formSuccess}</span>`;
+
                 setTimeout(() => {
-                    formMsg.innerHTML = '';
+                    formMsg.textContent = '';
                 }, 5000);
             }, 1500);
         });
     }
 
-    // Smooth scrolling
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener('click', function (e) {
-            const targetId = this.getAttribute('href');
-            if (targetId === '#') return;
-            
-            const targetElement = document.querySelector(targetId);
-            if (targetElement) {
-                e.preventDefault();
-                targetElement.scrollIntoView({
-                    behavior: 'smooth'
-                });
-            }
+    // 7. Smooth scrolling (respect reduced motion)
+    if (!prefersReducedMotion) {
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    e.preventDefault();
+                    targetElement.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
         });
-    });
+    }
 });
